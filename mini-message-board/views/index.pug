@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div(class="container-lg")
+    p(class="h1 mb-3")= title
+    a(class="btn btn-primary", href="/new") New
+    each message in messages
+      div(class="card my-4 p-4")
+        p!= "<b>User:</b> " + message.user
+        p!= "<b>Message:</b> " + message.text
+        p!= "<b>Date Added:</b> " + message.added.toLocaleString()

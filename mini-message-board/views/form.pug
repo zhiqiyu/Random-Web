@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+  div(class="container-md")
+
+    p(class="h1 mb-3") New Message
+
+    form(action="/new" method="POST")
+      div(class="mb-3")
+        label(for="input_user" class="form-label") User
+        input(id="input_user", type="text", class="form-control", name="user")
+      div(class="mb-3")
+        label(for="input_message" class="form-label") Message
+        textarea(id="input_message", class="form-control", rows="3", name="message")
+      div(class="mb-3")
+        input(id="input_submit", type="submit", class="form-control")
